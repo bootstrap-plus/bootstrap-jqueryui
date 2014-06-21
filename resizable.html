@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Example Page</title>
+
+        <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
+        <link href="jquery-ui/css/ui-lightness/jquery-ui-1.10.4.css" rel="stylesheet">
+
+        <script src="jquery/jquery-1.10.2.js"></script>
+        <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
+        <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
+
+        <style>
+            #resizable { width: 150px; height: 150px; padding: 0.5em; }
+            #resizable h3 { text-align: center; margin: 0; }
+        </style>
+
+    </head>
+    <body>
+        <div class="container" style="margin-top : 30px;margin-bottom: 30px">
+
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Interactions</li>
+                <li class="active">Draggable</li>
+            </ol>
+
+            <div id="resizable" class="jumbotron">
+                <h3>Resizable</h3>
+            </div>
+
+            <script>
+                $(function() {
+                    $( "#resizable" ).resizable();
+                });
+            </script>
+        </div>
+    </body>
+</html>

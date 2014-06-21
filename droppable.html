@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+
+    <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
+
+
+	<script src="jquery/jquery-1.10.2.js"></script>
+    <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
+    <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
+
+    <style>
+        #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+        #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; background-color: #dcdcdc; }
+    </style>
+
+</head>
+    <body>
+        <div class="container" style="margin-top: 30px;margin-bottom: 30px;">
+
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Interactions</li>
+                <li class="active">Droppable</li>
+            </ol>
+
+            <div id="draggable" class="jumbotron">
+                <p>Drag me to my target</p>
+            </div>
+            <div id="droppable" class="jumbotron">
+                <p>Drop here</p>
+            </div>
+            <script>
+                $(function() {
+                    $( "#draggable" ).draggable();
+                    $( "#droppable" ).droppable({
+                        drop: function( event, ui ) {
+                            $( this )
+                                .addClass( "ui-state-highlight" )
+                                .find( "p" )
+                                .html( "Dropped!" );
+                        }
+                    });
+                });
+            </script>
+        </div>
+    </body>
+</html>

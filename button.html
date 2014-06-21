@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Example Page</title>
+
+        <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="jquery-ui/css/smoothness/jquery-ui-1.10.4.min.css">
+
+
+        <script src="jquery/jquery-1.10.2.js"></script>
+        <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
+        <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
+        <script>
+            $(function() {
+                $( "input[type=submit], a.button, button" )
+                        .button()
+                        .click(function( event ) {
+                            event.preventDefault();
+                        });
+            });
+
+            $(function() {
+                $( "#check" ).button();
+                $( "#format" ).buttonset();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container" style="margin-top : 30px;margin-bottom: 30px">
+
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>Interactions</li>
+                <li class="active">Button</li>
+            </ol>
+
+            <h2>Default functionality</h2>
+            <button>A button element</button>
+            <input type="submit" value="A submit button">
+            <a href="#" class="button">An anchor</a>
+
+
+            <h2>Checkboxes</h2>
+            <input type="checkbox" id="check"><label for="check">Toggle</label>
+            <div id="format">
+                <input type="checkbox" id="check1"><label for="check1">B</label>
+                <input type="checkbox" id="check2"><label for="check2">I</label>
+                <input type="checkbox" id="check3"><label for="check3">U</label>
+            </div>
+        </div>
+    </body>
+</html>
