@@ -1,4 +1,4 @@
 bootstrap-jqueryui
 ==================
 
-Bootstrap jQuery Ui compatibility layer
+Bootstrap jQuery Ui compatibility tests
