@@ -5,7 +5,7 @@
         <title>jQuery UI Example Page</title>
 
         <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="jquery-ui/css/smoothness/jquery-ui-1.10.4.min.css">
+        <link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.10.4.notheme.min.css">
 
 
         <script src="jquery/jquery-1.10.2.js"></script>
@@ -13,11 +13,19 @@
         <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
         <script>
             $(function() {
-                $( "#dialog" ).dialog();
+                $( "#dialog" ).dialog({
+                    dialogClass: 'noTitleStuff',
+                    create: function( event, ui ) {
+                        $('.ui-dialog').addClass('modal-content');
+                        $('.ui-dialog-titlebar').addClass('modal-header');
+                        $('.ui-dialog-titlebar button').addClass('close');
+                        $('.ui-dialog-titlebar button').html('&times');
+                        $('.ui-dialog-content').addClass('modal-body');
+                    }
+                });
+
             });
         </script>
-
-
 
     </head>
     <body>
@@ -29,11 +37,9 @@
                 <li class="active">Dialog</li>
             </ol>
 
-
             <div id="dialog" title="Basic dialog">
                 <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
             </div>
-
 
         </div>
     </body>
