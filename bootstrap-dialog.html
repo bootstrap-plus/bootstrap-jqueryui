@@ -21,7 +21,6 @@
                     }
                     if ($this.data('draggable') === true) {
                         $this.find('.modal-dialog').first().draggable();
-                        $this.draggable();
                     }
                 })
 
@@ -42,13 +41,8 @@
                 Launch demo modal 1
             </button>
 
-            <!-- Button trigger modal -->
-            <button  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
-                Launch demo modal 2
-            </button>
-
             <!-- Modal -->
-            <div class="modal fade" data-resizable="true" data-backdrop="false" data-draggable="true" id="myModal" tabindex="-1" style="top: auto;right: auto;bottom: auto;left: auto;" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" data-resizable="true" data-backdrop="false" data-draggable="true" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -66,25 +60,6 @@
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" data-resizable="true" data-backdrop="false" data-draggable="true" id="myModal2" style="top: auto;right: auto;bottom: auto;left: auto;" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                            <h4 class="modal-title" id="myModalLabel2">Modal title 2</h4>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
     </body>
 </html>
