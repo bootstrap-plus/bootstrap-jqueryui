@@ -7,12 +7,11 @@
         <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.10.4.notheme.css">
 
-
         <script src="jquery/jquery-1.10.2.js"></script>
         <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
         <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
         <script src="bootstrap-jqueryui/dialog.js"></script>
-
+        <script src="google-code-prettify/run_prettify.js"></script>
     </head>
     <body>
         <div class="container" style="margin-top : 30px;margin-bottom: 30px">
@@ -25,22 +24,53 @@
 
             <!-- Button trigger modal -->
             <button  class="btn btn-primary btn-lg"  data-toggle="dialog" data-target="#dialog1">
-                Launch dialog
+                Launch dialog 1
             </button>
 
             <div id="dialog1" title="Basic dialog 1">
-                This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+                The dialog window can be moved, resized and closed with the 'x' icon.
             </div>
 
             <!-- Button trigger modal -->
             <button  class="btn btn-primary btn-lg" data-toggle="dialog" data-target="#dialog2">
-                Launch dialog
+                Launch dialog 2
             </button>
 
             <div id="dialog2" title="Basic dialog 2">
-                This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+                The dialog window can be moved, resized and closed with the 'x' icon.
             </div>
 
+            <br /><br /><br /><span style="cursor: pointer" onclick="$('.highlight').toggleClass('hide')"><i class="glyphicon glyphicon-eye-open"></i> View Source</span><br />
+            <div class="highlight hide">
+                <pre><code class="prettyprint">&lt;!doctype html&gt;
+&lt;html lang="us"&gt;
+  &lt;link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.10.4.notheme.css"&gt;
+
+  &lt;script src="jquery/jquery-1.10.2.js"&gt;&lt;/script&gt;
+  &lt;script src="bootstrap-3.1.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;script src="jquery-ui/js/jquery-ui-1.10.4.js"&gt;&lt;/script&gt;
+  &lt;script src="bootstrap-jqueryui/dialog.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;button  class="btn btn-primary btn-lg"  data-toggle="dialog" data-target="#dialog1"&gt;
+    Launch dialog 1
+  &lt;/button&gt;
+
+  &lt;div id="dialog1" title="Basic dialog 1"&gt;
+    The dialog window can be moved, resized and closed with the 'x' icon.
+  &lt;/div&gt;
+
+  &lt;button  class="btn btn-primary btn-lg" data-toggle="dialog" data-target="#dialog2"&gt;
+    Launch dialog 2
+  &lt;/button&gt;
+
+  &lt;div id="dialog2" title="Basic dialog 2"&gt;
+    The dialog window can be moved, resized and closed with the 'x' icon.
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
         </div>
     </body>
 </html>
