@@ -6470,13 +6470,19 @@ if ( $.uiBackCompat !== false ) {
 	});
 }
 
+window.dialogShift = 0;
 $( document ).ready(function() {
+
     $('*[data-toggle="dialog"]').each( function() {
 
         var $target = $($(this).data('target'));
 
         $target.dialog({
             autoOpen: false,
+            position: {
+                my: 'center+'+window.dialogShift+' center+'+window.dialogShift,
+                collision: 'fit flip'
+            },
             create: function( event, ui ) {
                 $('.ui-dialog').addClass('modal-content');
                 $('.ui-dialog-titlebar').addClass('modal-header');
@@ -6490,6 +6496,8 @@ $( document ).ready(function() {
             $target.dialog( "open" );
             return false;
         });
+
+        window.dialogShift =+ 20;
     });
 });
 
