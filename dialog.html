@@ -11,41 +11,7 @@
         <script src="jquery/jquery-1.10.2.js"></script>
         <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
         <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
-        <script>
-            $(function() {
-                $( "#dialog1" ).dialog({
-                    autoOpen: false,
-                    create: function( event, ui ) {
-                        $('.ui-dialog').addClass('modal-content');
-                        $('.ui-dialog-titlebar').addClass('modal-header');
-                        $('.ui-dialog-titlebar button').addClass('close');
-                        $('.ui-dialog-titlebar button').html('&times');
-                        $('.ui-dialog-content').addClass('modal-body');
-                    }
-                });
-                $( "#opener1" ).click(function() {
-                    $( "#dialog1" ).dialog( "open" );
-                    return false;
-                });
-
-                $( "#dialog2" ).dialog({
-                    autoOpen: false,
-                    create: function( event, ui ) {
-                        $('.ui-dialog').addClass('modal-content');
-                        $('.ui-dialog-titlebar').addClass('modal-header');
-                        $('.ui-dialog-titlebar button').addClass('close');
-                        $('.ui-dialog-titlebar button').html('&times');
-                        $('.ui-dialog-content').addClass('modal-body');
-                     }
-                });
-                $( "#opener2" ).click(function() {
-                    $( "#dialog2" ).dialog( "open" );
-                    return false;
-                });
-
-
-            });
-        </script>
+        <script src="bootstrap-jqueryui/dialog.js"></script>
 
     </head>
     <body>
@@ -58,7 +24,7 @@
             </ol>
 
             <!-- Button trigger modal -->
-            <button  class="btn btn-primary btn-lg" id="opener1">
+            <button  class="btn btn-primary btn-lg"  data-toggle="dialog" data-target="#dialog1">
                 Launch dialog
             </button>
 
@@ -67,7 +33,7 @@
             </div>
 
             <!-- Button trigger modal -->
-            <button  class="btn btn-primary btn-lg" id="opener2">
+            <button  class="btn btn-primary btn-lg" data-toggle="dialog" data-target="#dialog2">
                 Launch dialog
             </button>
 
