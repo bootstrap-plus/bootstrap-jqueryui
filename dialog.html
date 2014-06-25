@@ -6,12 +6,17 @@
 
         <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.10.4.notheme.css">
+        <link rel="stylesheet" href="highlight/github.css">
 
         <script src="jquery/jquery-1.10.2.js"></script>
         <script src="bootstrap-3.1.1/js/bootstrap.min.js"></script>
         <script src="jquery-ui/js/jquery-ui-1.10.4.js"></script>
         <script src="bootstrap-jqueryui/dialog.js"></script>
-        <script src="google-code-prettify/run_prettify.js"></script>
+
+
+        <script src="highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
     </head>
     <body>
         <div class="container" style="margin-top : 30px;margin-bottom: 30px">
@@ -40,9 +45,8 @@
                 The dialog window can be moved, resized and closed with the 'x' icon.
             </div>
 
-            <br /><br /><br /><span style="cursor: pointer" onclick="$('.highlight').toggleClass('hide')"><i class="glyphicon glyphicon-eye-open"></i> View Source</span><br />
-            <div class="highlight hide">
-                <pre><code class="prettyprint">&lt;!doctype html&gt;
+            <br /><br /><br /><span style="cursor: pointer" onclick="$('#code').fadeToggle()"><i class="glyphicon glyphicon-eye-open"></i> View Source</span><br />
+                <pre id="code" style="display: none"><code class="html">&lt;!doctype html&gt;
 &lt;html lang="us"&gt;
   &lt;link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.min.css"&gt;
   &lt;link rel="stylesheet" href="jquery-ui/css/jquery-ui-1.10.4.notheme.css"&gt;
@@ -70,7 +74,6 @@
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-            </div>
         </div>
     </body>
 </html>
