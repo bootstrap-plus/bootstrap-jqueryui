@@ -6477,6 +6477,7 @@ $( document ).ready(function() {
 
         var $target = $($(this).data('target'));
 
+        var dialogContentWidthMargin, dialogContentHeightMargin;
         $target.dialog({
             autoOpen: false,
             position: {
@@ -6492,26 +6493,35 @@ $( document ).ready(function() {
             },
             open: function( event, ui ) {
                 var $this = $(this);
+                var $thisParent = $this.parent();
 
-                var dialogHeight = $(this).height();
-                var dialogWidth = $(this).width();
+                var dialogHeight = $thisParent.height();
+                var dialogWidth = $thisParent.width();
                 var windowHeight = $( window ).height();
                 var windowWidth = $( window ).width();
 
+
                 if (dialogHeight > windowHeight) {
-                    var $thisParent = $(this).parent();
                     var titlebarHeight = $thisParent.find('.ui-dialog-titlebar').outerHeight();
                     $thisParent.css({ top: '7px' });
                     $thisParent.height(windowHeight-27);
                     $this.outerHeight(windowHeight-titlebarHeight-27);
                 }
                 if (dialogWidth > windowWidth) {
-                    var $thisParent = $(this).parent();
                     $thisParent.css({ left: '7px' });
                     $thisParent.width(windowWidth-27);
                     $this.outerHeight(windowHeight-27);
                 }
 
+                dialogContentWidthMargin = $thisParent.width()-$this.width();
+                dialogContentHeightMargin = $thisParent.height()-$this.height();
+            },
+            resize: function( event, ui ) {
+                var $this = $(this);
+                var $thisParent = $this.parent();
+
+                $this.width($thisParent.width()-dialogContentWidthMargin);
+                $this.height($thisParent.height()-dialogContentHeightMargin);
             }
         });
 
