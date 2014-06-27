@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-plus/bootstrap-jqueryui",
+  "type": "component",
+  "description": "A jqueryui version for bootstrap3.",
+  "homepage": "http://bootstrap-plus.github.io/bootstrap-jqueryui/",
+  "license": "MIT",
+  "extra": {
+    "component": {
+      "files": [
+        "bootstrap-jqueryui.js",
+        "bootstrap-jqueryui.min.js",
+        "bootstrap-jqueryui.css",
+        "bootstrap-jqueryui.min.css"
+      ]
+    }
+  }
+}
