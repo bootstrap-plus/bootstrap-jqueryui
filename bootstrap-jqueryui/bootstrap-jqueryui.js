@@ -6489,6 +6489,29 @@ $( document ).ready(function() {
                 $('.ui-dialog-titlebar button').addClass('close');
                 $('.ui-dialog-titlebar button').html('&times');
                 $('.ui-dialog-content').addClass('modal-body');
+            },
+            open: function( event, ui ) {
+                var $this = $(this);
+
+                var dialogHeight = $(this).height();
+                var dialogWidth = $(this).width();
+                var windowHeight = $( window ).height();
+                var windowWidth = $( window ).width();
+
+                if (dialogHeight > windowHeight) {
+                    var $thisParent = $(this).parent();
+                    var titlebarHeight = $thisParent.find('.ui-dialog-titlebar').outerHeight();
+                    $thisParent.css({ top: '7px' });
+                    $thisParent.height(windowHeight-27);
+                    $this.outerHeight(windowHeight-titlebarHeight-27);
+                }
+                if (dialogWidth > windowWidth) {
+                    var $thisParent = $(this).parent();
+                    $thisParent.css({ left: '7px' });
+                    $thisParent.width(windowWidth-27);
+                    $this.outerHeight(windowHeight-27);
+                }
+
             }
         });
 
